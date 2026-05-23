@@ -3,670 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRE Consulting | Right-of-Way Appraisals Indiana</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 15px;
-      color: #333;
-      background: #fff;
-    }
-
-    /* ── HEADER ──────────────────────────────────────── */
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 24px 0 0;
-      background: #fff;
-    }
-    header img.logo {
-      width: 220px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-    nav {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-    }
-    nav a {
-      display: inline-block;
-      padding: 14px 36px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      color: #5a9fbe;
-      border-right: 1px solid #ddd;
-      transition: background 0.15s;
-    }
-    nav a:first-child { border-left: 1px solid #ddd; }
-    nav a.active, nav a:hover {
-      background: #c0c0c0;
-      color: #fff;
-    }
-
-    /* ── PAGE SECTIONS ───────────────────────────────── */
-    .page { display: none; }
-    .page.active { display: block; }
-
-    /* ── COMMON ──────────────────────────────────────── */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-    h1.page-hero {
-      font-size: 2.6rem;
-      font-weight: 300;
-      color: #888;
-      text-align: center;
-      padding: 36px 0 8px;
-      letter-spacing: 0.02em;
-    }
-    h1.page-hero strong { color: #5a9fbe; font-weight: 700; }
-    .hero-rule {
-      border: none;
-      border-top: 1px solid #aaa;
-      width: 600px;
-      max-width: 90%;
-      margin: 0 auto 32px;
-    }
-
-    /* ── HOME PAGE ───────────────────────────────────── */
-    .home-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      padding: 0 24px 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .home-card { position: relative; }
-    .home-card-img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-    .home-card-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(90,159,190,0.82);
-      color: #fff;
-      font-size: 1.5rem;
-      font-style: italic;
-      padding: 14px 20px;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-    .home-card-label em { font-style: normal; font-weight: 700; }
-    .home-card-body { padding: 14px 0 0; }
-    .home-card-body h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      text-decoration: underline;
-      color: #333;
-      margin-bottom: 8px;
-      cursor: pointer;
-    }
-    .home-card-body h3:hover { color: #5a9fbe; }
-    .home-card-body p { font-size: 0.9rem; line-height: 1.6; color: #444; }
-
-    /* ── INNER PAGES ─────────────────────────────────── */
-    .inner-page { padding: 40px 24px 60px; max-width: 1100px; margin: 0 auto; }
-    .inner-page h2 {
-      font-size: 2rem;
-      font-weight: 300;
-      color: #888;
-      margin-bottom: 6px;
-    }
-    .inner-rule {
-      border: none;
-      border-top: 1px solid #aaa;
-      width: 500px;
-      max-width: 100%;
-      margin: 0 0 24px;
-    }
-    .inner-page p { line-height: 1.75; margin-bottom: 12px; color: #444; font-size: 0.93rem; }
-
-    /* Right of Way three-column */
-    .row-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-top: 36px;
-    }
-    .row-3-col h3 {
-      font-size: 1.5rem;
-      color: #5a9fbe;
-      margin-bottom: 12px;
-    }
-    .row-3-col img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .row-3-col p { font-size: 0.88rem; line-height: 1.65; color: #444; margin-bottom: 8px; }
-    .row-3-col ul { padding-left: 20px; font-size: 0.88rem; line-height: 1.8; color: #444; }
-
-    /* Brokerage two-column */
-    .row-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 36px;
-    }
-    .row-2-col h3 {
-      font-size: 1.5rem;
-      color: #5a9fbe;
-      text-decoration: underline;
-      margin-bottom: 14px;
-      cursor: default;
-    }
-    .row-2-col img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      margin-bottom: 16px;
-      display: block;
-    }
-    .row-2-col p { font-size: 0.9rem; line-height: 1.7; color: #444; margin-bottom: 8px; }
-
-    /* About team grid */
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-top: 40px;
-    }
-    .team-card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-      filter: grayscale(100%);
-    }
-    .team-card-label {
-      background: #5ab4d4;
-      color: #fff;
-      padding: 10px 14px;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .team-card-body { padding: 12px 0; }
-    .team-card-body h4 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 6px;
-    }
-    .team-card-body p { font-size: 0.82rem; line-height: 1.6; color: #555; margin-bottom: 6px; }
-
-    /* Contact */
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-    .contact-info h2 { font-size: 2rem; font-weight: 300; color: #888; margin-bottom: 10px; }
-    .contact-info-box {
-      background: #bbb;
-      color: #fff;
-      padding: 14px 18px;
-      font-size: 0.9rem;
-      line-height: 1.8;
-      margin-top: 12px;
-    }
-    .contact-form label {
-      display: block;
-      font-size: 0.8rem;
-      color: #444;
-      margin-bottom: 4px;
-      margin-top: 14px;
-    }
-    .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      border: none;
-      border-bottom: 1px solid #999;
-      padding: 6px 2px;
-      font-size: 0.9rem;
-      outline: none;
-      background: transparent;
-    }
-    .contact-form textarea { height: 120px; resize: vertical; }
-    .btn-submit {
-      display: block;
-      margin: 20px 0 0 auto;
-      background: #5ab4d4;
-      color: #fff;
-      border: none;
-      padding: 10px 32px;
-      font-size: 0.95rem;
-      cursor: pointer;
-    }
-    .btn-submit:hover { background: #4a9abf; }
-    .offices {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 36px;
-    }
-    .office-card {
-      background: #aaa;
-      padding: 16px 18px 0;
-      color: #fff;
-      font-size: 0.88rem;
-      line-height: 1.7;
-    }
-    .office-card h4 { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 8px; }
-    .office-map {
-      width: 100%;
-      height: 160px;
-      border: none;
-      display: block;
-      margin-top: 12px;
-    }
-
-    /* ── FOOTER ──────────────────────────────────────── */
-    footer {
-      background: #7ecfe8;
-      padding: 40px 24px;
-      display: grid;
-      grid-template-columns: 200px 1fr 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-      max-width: 100%;
-    }
-    footer img.footer-logo { width: 160px; height: auto; }
-    footer h4 {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    footer a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.88rem;
-      margin-bottom: 4px;
-    }
-    footer a:hover { text-decoration: underline; }
-    footer p { color: #fff; font-size: 0.88rem; line-height: 1.7; }
-    .footer-newsletter { grid-column: span 1; }
-    .newsletter-box {
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.4);
-      padding: 20px;
-    }
-    .newsletter-box h3 { color: #fff; font-size: 1.1rem; margin-bottom: 8px; }
-    .newsletter-box p { font-size: 0.82rem; color: #fff; margin-bottom: 12px; }
-    .newsletter-box label { font-size: 0.78rem; color: #fff; display: block; margin-bottom: 6px; }
-    .newsletter-row { display: flex; gap: 8px; }
-    .newsletter-box input[type="email"] {
-      flex: 1;
-      border: none;
-      border-bottom: 1px solid #fff;
-      background: transparent;
-      padding: 6px 2px;
-      color: #fff;
-      font-size: 0.88rem;
-      outline: none;
-    }
-    .newsletter-box input::placeholder { color: rgba(255,255,255,0.6); }
-    .newsletter-box button {
-      background: #fff;
-      color: #5ab4d4;
-      border: none;
-      padding: 6px 16px;
-      font-size: 0.82rem;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    .linkedin-icon {
-      display: inline-block;
-      width: 36px;
-      height: 36px;
-      background: #0077b5;
-      color: #fff;
-      text-align: center;
-      line-height: 36px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      border-radius: 4px;
-      text-decoration: none;
-      margin-top: 12px;
-    }
-
-    /* ── RESPONSIVE ──────────────────────────────────── */
-    @media (max-width: 768px) {
-      nav a { padding: 12px 14px; font-size: 11px; letter-spacing: 0; }
-      .home-grid, .row-3, .row-2, .team-grid, .offices,
-      footer, .contact-layout { grid-template-columns: 1fr; }
-      footer { grid-template-columns: 1fr 1fr; }
-      .contact-layout { grid-template-columns: 1fr; }
-      h1.page-hero { font-size: 1.8rem; }
-    }
-  </style>
+  <meta name="description" content="CRE Consulting, LLC — Right-of-Way, Eminent Domain, Appraisals, and Real Estate Brokerage in Indiana." />
+  <title>CRE Consulting | Real Solutions for Real Estate Problems</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ══ HEADER ══════════════════════════════════════════ -->
-<header>
-  <a href="#" onclick="showPage('home')">
-    <img class="logo" src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CRE_newlogo_edited.png" alt="CRE Consulting" />
-  </a>
-  <nav>
-    <a href="#" id="nav-home"     class="active" onclick="showPage('home')">HOME</a>
-    <a href="#" id="nav-row"               onclick="showPage('row')">RIGHT OF WAY</a>
-    <a href="#" id="nav-brokerage"         onclick="showPage('brokerage')">BROKERAGE / APPRAISAL</a>
-    <a href="#" id="nav-about"             onclick="showPage('about')">ABOUT</a>
-    <a href="#" id="nav-contact"           onclick="showPage('contact')">CONTACT</a>
-  </nav>
-</header>
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════ -->
+  <header>
+    <a href="index.html">
+      <img class="site-logo" src="images/logo.png" alt="CRE Consulting" />
+    </a>
+    <nav>
+      <a href="index.html" class="active">HOME</a>
+      <a href="right-of-way.html">RIGHT OF WAY</a>
+      <a href="brokerage.html">BROKERAGE / APPRAISAL</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
 
-<!-- ══ HOME ════════════════════════════════════════════ -->
-<div id="page-home" class="page active">
-  <h1 class="page-hero"><strong>Real</strong> Solutions for <strong>Real Estate</strong> Problems.</h1>
-  <hr class="hero-rule" />
+  <!-- ═══════════════════════════════════════════
+       HERO TAGLINE
+  ════════════════════════════════════════════ -->
+  <p class="home-tagline">
+    <strong>Real</strong> Solutions for <strong>Real Estate</strong> Problems.
+  </p>
+  <hr class="tagline-rule" />
 
-  <div class="home-grid">
-    <!-- Card 1: Right of Way -->
-    <div class="home-card">
-      <img class="home-card-img"
-           src="https://images.unsplash.com/photo-1597149256259-5e7e51e78b46?w=700&q=80"
-           alt="Right of Way road construction" />
-      <div class="home-card-label" onclick="showPage('row')">Right of Way <em>the right way</em></div>
-      <div class="home-card-body">
-        <h3 onclick="showPage('row')">Right of Way and Eminent Domain Services</h3>
-        <p>We counsel project and property owners in eminent domain and property valuation matters. We also represent governmental agencies and quasi-governmental entities in the acquisitions through eminent domain.</p>
-        <p>We are experienced in all aspects of eminent domain proceedings, from pre-condemnation planning and evaluation through to any necessary litigation.</p>
-      </div>
-    </div>
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT — 2×2 CARD GRID
+  ════════════════════════════════════════════ -->
+  <main>
+    <div class="page-wrapper">
+      <div class="home-grid">
 
-    <!-- Card 2: Brokerage -->
-    <div class="home-card">
-      <img class="home-card-img"
-           src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80"
-           alt="Available commercial properties" />
-      <div class="home-card-label" onclick="showPage('brokerage')">Available Properties</div>
-      <div class="home-card-body">
-        <h3 onclick="showPage('brokerage')">Real Estate Brokerage Services</h3>
-        <p>We are your one stop solution for real estate sales and leasing. Whether it is for agricultural properties, your small business, hotel or office building, we and our staff are available to assist to help place you in the right direction for maximum value.</p>
-      </div>
-    </div>
-
-    <!-- Card 3: Consulting -->
-    <div class="home-card">
-      <img class="home-card-img"
-           src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80"
-           alt="Consulting team" />
-      <div class="home-card-label" onclick="showPage('about')">Consulting, <em>not</em> the Hassle</div>
-      <div class="home-card-body">
-        <h3 onclick="showPage('about')">Consulting Services</h3>
-        <p>Too many times you just need a simple answer; not a hassle of technicalities. CRE has been able to navigate the sophisticated regulations to provide you with the simple answers you need to answer your questions.</p>
-      </div>
-    </div>
-
-    <!-- Card 4: Appraisal -->
-    <div class="home-card">
-      <img class="home-card-img"
-           src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80"
-           alt="Appraising complex properties" />
-      <div class="home-card-label" onclick="showPage('brokerage')">Appraising <em>the Complex</em></div>
-      <div class="home-card-body">
-        <h3 onclick="showPage('brokerage')">Appraisal Services</h3>
-        <p>From specialty and complex to eminent domain analysis, we've appraised it all. CRE is not only ready to accept your complex assignment but is eager to do so. Appraising the unique and difficult is what keeps our work interesting. We can provide a simple answer to what may look like a very complex problem.</p>
-        <p>Contact us today for that unique problem to which you need a solution.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ RIGHT OF WAY ════════════════════════════════════ -->
-<div id="page-row" class="page">
-  <div class="inner-page">
-    <h2>Eminent Domain and Right of Way</h2>
-    <hr class="inner-rule" />
-    <p>Our consultants counsel commercial and residential property owners in eminent domain and property valuation matters. We also represent governmental agencies and quasi-governmental entities in the acquisitions through eminent domain.</p>
-    <p>We are experienced in all aspects of eminent domain proceedings, from pre-condemnation planning and evaluation through to any necessary litigation. Our team's experience and resources in land use, environmental and governmental regulatory matters allow us to serve our client's needs throughout the process.</p>
-    <p>Eminent domain often involves compensation for a taking of real property and damage to a business, damage to the residual, damage to or sterilization of minerals, impaired access, and other intricate issues. We are experienced in the intricacies of such valuation and damages issues. In addition to our internal resources, we work with expert consultants, such as accountants, engineers, surveyors, environmental analysts and other professionals in support of our client's case.</p>
-    <p>We assist clients in resolving eminent domain matters through negotiated settlements, including changes to a proposed taking that may mitigate negative impacts on the parties involved.</p>
-
-    <div class="row-3">
-      <!-- Management -->
-      <div class="row-3-col">
-        <h3>Management</h3>
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Project management aerial view" />
-        <p>This is the process of monitoring all aspects of the acquisition process to ensure compliance with all federal and state regulations. Knowledge of and ability to effectively coordinate all phases and disciplines of the right of way acquisition process is required. We have a thorough working knowledge of 23 and 49 CFR, the Uniform Relocation Assistance and Real Property Acquisition Policies Act of 1970 and its amendments (the Uniform Act), and the INDOT's Policy and Procedures Right of Way Manuals.</p>
-        <p>We clearly demonstrate past experience in managing complex projects that involve multiple complicated tasks and show experience as a supervisor and/or manager of a job involving workload identification, assignment of tasks, scheduling performance and monitoring progress of multiple and/or complex real estate parcels.</p>
-        <p><strong>We are INDOT Prequalified in:</strong></p>
-        <ul>
-          <li>12.1 – Project Management for Acquisition Services</li>
-          <li>12.2 – Title Research (Pending)</li>
-          <li>13.1 – Utility Relocation (Pending)</li>
-        </ul>
-      </div>
-
-      <!-- Appraising -->
-      <div class="row-3-col">
-        <h3>Appraising</h3>
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Cable installation workers" />
-        <p>The term appraisal means a written statement independently and impartially prepared by a qualified appraiser setting forth an opinion of defined value of an adequately described property as of a specific date, supported by the presentation and analysis of relevant market information.</p>
-        <p>Our firm is familiar with the Department of Transportation, FHWA's Uniform Relocation Assistance and Real Property Acquisition for Federal and Federally-Assisted Programs Final Rule; 49 CFR Part 24.102 and 24.103; USPAP; and the INDOT Appraisal Manual.</p>
-        <p>Our firm also has experience in providing expert appraisal testimony in eminent domain cases.</p>
-        <p><strong>We are INDOT Prequalified in:</strong></p>
-        <ul>
-          <li>12.3 – Value Analysis</li>
-          <li>12.4 – Appraisal</li>
-          <li>12.5 – Appraisal Review</li>
-        </ul>
-      </div>
-
-      <!-- Acquisition -->
-      <div class="row-3-col">
-        <h3>Acquisition</h3>
-        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="Property acquisition" />
-        <p>Negotiation is the process of acquiring property rights from owners for the expansion and rehabilitation of the state's highway system. This process includes effectively communicating and offering to the owner, in writing, fair and reasonable compensation in compliance with the Uniform Act, Indiana law and INDOT procedures.</p>
-        <p>Our firm demonstrates familiarity with Indiana Code 32-24-1, INDOT's acquisition policies and procedures, highway construction and right of way plans, titles and appraisals.</p>
-        <p>We are able to explain the project, the taking, the impact of the taking to the residue, the acquisition process, the offer, and negotiate in an honest and competent manner with the property owner(s).</p>
-        <p><strong>We are INDOT Prequalified in:</strong></p>
-        <ul>
-          <li>12.6 – Negotiation (Pending)</li>
-          <li>12.7 – Closing</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ BROKERAGE / APPRAISAL ════════════════════════════ -->
-<div id="page-brokerage" class="page">
-  <div class="inner-page">
-    <h2>Brokerage &amp; Valuation Services</h2>
-    <hr class="inner-rule" />
-    <p>While the firm's roots are tied to hospitality and agricultural investment sales, the team has grown to include highly experienced professionals with knowledge of the office, industrial, and retail markets.</p>
-    <p>The foundation of our business is the depth of our local market knowledge. Our history of maintaining relationships in local markets enables us to be a superior information source and transaction service provider.</p>
-    <p>CRE Consulting is composed of experienced staff split into departments for specialized skills, including Residential Services. Our experience in the residential side of the business allows us to provide the tools, resources, and knowledge that are required in the effective appraising, leasing or sale of your asset.</p>
-
-    <div class="row-2">
-      <div class="row-2-col">
-        <h3>Offerings / Listings</h3>
-        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Commercial building listing" />
-        <p>Whether you are seeking retail, office, raw land or industrial properties, please take a look at our available inventory for purchase or lease.</p>
-        <p>If one of these properties is not a good fit for your company's needs, let us know what you are seeking. We can assist with your search to find the ideal building, space or raw land to fit your needs and save you time and money.</p>
-      </div>
-      <div class="row-2-col">
-        <h3>Valuation / Appraising</h3>
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80" alt="Appraiser reviewing documents" />
-        <p>Your property value is a key factor in guiding real estate decisions. In today's ever-changing market, you need access to the most comprehensive, real-time data and skilled professionals who derive intelligence from analytics.</p>
-        <p>We help you realize the true value of your property with trusted real estate insights from the most recognized professionals in the industry.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ ABOUT ════════════════════════════════════════════ -->
-<div id="page-about" class="page">
-  <div class="inner-page">
-    <div style="display:grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start;">
-      <div>
-        <h2>About</h2>
-        <hr class="inner-rule" style="width:100%" />
-        <p>CRE Consulting, LLC (CREC) is a woman-owned small business with a diverse staff equipped to handle nearly any real estate need. We strive to accurately, promptly and expertly handle any request.</p>
-        <p>We appreciate the opportunity to advise how we can assist you in your next opportunity.</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80"
-             alt="Modern office" style="width:100%; height:220px; object-fit:cover; display:block;" />
-      </div>
-    </div>
-
-    <div class="team-grid">
-
-      <div class="team-card">
-        <img src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,enc_avif,quality_auto/CRE_newlogo_edited.png"
-             alt="Summer Roots" style="background:#eee; object-fit:contain; padding:20px;" />
-        <div class="team-card-label">Summer Roots, M.A.</div>
-        <div class="team-card-body">
-          <h4>Principal / President</h4>
-          <p>Summer has been with CREC since 2015 and was hired to grow the Residential Valuation Division. In 2021, Summer acquired the company with specific desire in expanding the Commercial and Governmental sectors including the Right of Way division.</p>
-          <p>Summer leads all vision for the firm and daily management and financial responsibility of the organization.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <img src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,enc_avif,quality_auto/CRE_newlogo_edited.png"
-             alt="Jacob Volbers" style="background:#eee; object-fit:contain; padding:20px;" />
-        <div class="team-card-label">Jacob Volbers</div>
-        <div class="team-card-body">
-          <h4>Right of Way Appraiser</h4>
-          <p>Jacob, a Certified Residential Appraiser with more than 4 years experience, has been with CREC since 2023. He adeptly evaluates properties across Indianapolis, Carmel, Fishers, Columbus, Greenwood, and beyond.</p>
-          <p>His meticulous analyses and market insights enhance valuation accuracy.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <img src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,enc_avif,quality_auto/CRE_newlogo_edited.png"
-             alt="Erin Laswell" style="background:#eee; object-fit:contain; padding:20px;" />
-        <div class="team-card-label">Erin Laswell</div>
-        <div class="team-card-body">
-          <h4>Appraiser in Training</h4>
-          <p>Erin joined CREC in 2025. She is an experienced Athletic Trainer driven each day to leave people better than she finds them. We are excited to have Erin join the CREC team as she looks to add to her ongoing profession.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <img src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,enc_avif,quality_auto/CRE_newlogo_edited.png"
-             alt="Karyl Cabus" style="background:#eee; object-fit:contain; padding:20px;" />
-        <div class="team-card-label">Karyl Cabus</div>
-        <div class="team-card-body">
-          <h4>Research Analyst / Document Specialist</h4>
-          <p>Karyl has been with CREC since 2022 serving in the role of Document Specialist and Researcher, most recently taking on marketing management duties. She specializes in due diligence and data collection of real property.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <img src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,enc_avif,quality_auto/CRE_newlogo_edited.png"
-             alt="Madeline Roots" style="background:#eee; object-fit:contain; padding:20px;" />
-        <div class="team-card-label">Madeline Roots</div>
-        <div class="team-card-body">
-          <h4>Appraiser Trainee</h4>
-          <p>Maddie has been with CREC since 2024 and is a Licensed Appraiser Trainee. She is eager to combine her passion for Environmental Science with Right of Way and Public Works projects. She is a recipient of the National Merit Scholarship and attends the University of Alabama.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <img src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,enc_avif,quality_auto/CRE_newlogo_edited.png"
-             alt="Chad Roots" style="background:#eee; object-fit:contain; padding:20px;" />
-        <div class="team-card-label">Chad Roots, SR/WA, MAI</div>
-        <div class="team-card-body">
-          <h4>Vice President</h4>
-          <p>Chad is a highly distinguished real estate professional with nearly 25 years of experience in appraising, appraisal review, project management, and right-of-way (R/W) acquisition. He brings unparalleled expertise and deep understanding of INDOT requirements.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ══ CONTACT ══════════════════════════════════════════ -->
-<div id="page-contact" class="page">
-  <div class="inner-page">
-    <div class="contact-layout">
-      <div class="contact-info">
-        <h2>Contact Us</h2>
-        <hr class="inner-rule" style="width:100%; margin-bottom:0" />
-        <div class="contact-info-box">
-          info@consultcre.com<br />
-          Phone/Text: 317.660.1492
-        </div>
-      </div>
-      <div class="contact-form">
-        <div class="form-row">
-          <div>
-            <label for="cf-name">Name</label>
-            <input type="text" id="cf-name" placeholder="" />
+        <!-- Card 1: Right of Way -->
+        <div class="home-card">
+          <div class="home-card-image-wrap">
+            <img src="images/home-row.jpg" alt="Road construction paving crew" />
+            <div class="home-card-overlay">
+              <a href="right-of-way.html">Right of Way <em>the right way</em></a>
+            </div>
           </div>
-          <div>
-            <label for="cf-msg">Message</label>
-            <textarea id="cf-msg" rows="6"></textarea>
+          <div class="home-card-body">
+            <h3><a href="right-of-way.html">Right of Way and Eminent Domain Services</a></h3>
+            <p>We counsel project and property owners in eminent domain and property valuation matters.
+               We also represent governmental agencies and quasi-governmental entities in the
+               acquisitions through eminent domain.</p>
+            <p>We are experienced in all aspects of eminent domain proceedings, from pre-condemnation
+               planning and evaluation through to any necessary litigation.</p>
           </div>
         </div>
-        <label for="cf-email">Email *</label>
-        <input type="email" id="cf-email" placeholder="" />
-        <label for="cf-subject">Subject</label>
-        <input type="text" id="cf-subject" placeholder="" />
-        <button class="btn-submit" onclick="handleContactSubmit()">Submit</button>
+
+        <!-- Card 2: Available Properties / Brokerage -->
+        <div class="home-card">
+          <div class="home-card-image-wrap">
+            <img src="images/home-brokerage.jpg" alt="Combine harvester in Indiana farm field" />
+            <div class="home-card-overlay">
+              <a href="brokerage.html">Available Properties</a>
+            </div>
+          </div>
+          <div class="home-card-body">
+            <h3><a href="brokerage.html">Real Estate Brokerage Services</a></h3>
+            <p>We are your one stop solution for real estate sales and leasing. Whether it is for
+               agricultural properties, your small business, hotel or office building, we and our staff
+               are available to assist to help place you in the right direction for maximum value.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Consulting -->
+        <div class="home-card">
+          <div class="home-card-image-wrap">
+            <img src="images/home-consulting.jpg" alt="Professional consulting team" />
+            <div class="home-card-overlay">
+              <a href="about.html">Consulting, <em>not</em> the Hassle</a>
+            </div>
+          </div>
+          <div class="home-card-body">
+            <h3><a href="about.html">Consulting Services</a></h3>
+            <p>Too many times you just need a simple answer; not a hassle of technicalities. CRE has
+               been able to navigate the sophisticated regulations to provide you with the simple
+               answers you need to answer your questions.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Appraising the Complex -->
+        <div class="home-card">
+          <div class="home-card-image-wrap">
+            <img src="images/home-appraisal.jpg" alt="Modern commercial office building interior" />
+            <div class="home-card-overlay">
+              <a href="brokerage.html">Appraising <em>the Complex</em></a>
+            </div>
+          </div>
+          <div class="home-card-body">
+            <h3><a href="brokerage.html">Appraisal Services</a></h3>
+            <p>From specialty and complex to eminent domain analysis, we've appraised it all. CRE is
+               not only ready to accept your complex assignment but is eager to do so. Appraising the
+               unique and difficult is what keeps our work interesting. We can provide a simple answer
+               to what may look like a very complex problem.</p>
+            <p>Contact us today for that unique problem to which you need a solution.</p>
+          </div>
+        </div>
+
+      </div><!-- /.home-grid -->
+    </div><!-- /.page-wrapper -->
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer>
+    <div>
+      <img class="footer-logo" src="images/logo.png" alt="CRE Consulting" />
+      <a class="footer-linkedin" href="https://www.linkedin.com/company/cre-consulting" target="_blank" rel="noopener noreferrer">in</a>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="right-of-way.html">Right of Way</a>
+        <a href="brokerage.html">Brokerage / Appraisal</a>
+        <a href="about.html">About</a>
+      </div>
+      <br />
+      <h4>Support</h4>
+      <div class="footer-links">
+        <a href="contact.html">Contact</a>
       </div>
     </div>
 
-    <div class="offices">
-      <div class="office-card">
-        <h4>CORPORATE OFFICE:</h4>
-        <p>6271 W Congress Dr.,<br />Pendleton, IN 46064</p>
-        <iframe class="office-map"
-          src="https://maps.google.com/maps?q=6271+W+Congress+Dr+Pendleton+IN+46064&output=embed"
-          loading="lazy" title="Corporate Office Map"></iframe>
-      </div>
-      <div class="office-card">
-        <h4>INDIANAPOLIS OFFICE:</h4>
-        <p>Indianapolis, IN</p>
-        <iframe class="office-map"
-          src="https://maps.google.com/maps?q=Indianapolis+IN&output=embed"
-          loading="lazy" title="Indianapolis Office Map"></iframe>
-      </div>
-      <div class="office-card">
-        <h4>FT. WAYNE OFFICE:</h4>
-        <p>429 E Dupont Rd, Ste 1045<br />Fort Wayne, IN 46825</p>
-        <iframe class="office-map"
-          src="https://maps.google.com/maps?q=429+E+Dupont+Rd+Fort+Wayne+IN+46825&output=embed"
-          loading="lazy" title="Fort Wayne Office Map"></iframe>
+    <div class="footer-contact">
+      <h4>CRE Consulting, LLC</h4>
+      <p>
+        6271 W Congress Dr.,<br />
+        Pendleton, IN&nbsp; 46064<br />
+        <br />
+        <a href="mailto:info@consultcre.com">info@consultcre.com</a><br />
+        <a href="tel:3176601492">317.660.1492</a>
+      </p>
+    </div>
+
+    <div>
+      <div class="newsletter-box">
+        <h3>Join CREC Newsletter</h3>
+        <p>Join the CRE Consulting newsletter for Indiana market insights and R/W updates.</p>
+        <label for="footer-email">Email *</label>
+        <div class="newsletter-row">
+          <input type="email" id="footer-email" placeholder="" />
+          <button class="newsletter-btn" type="button">Subscribe</button>
+        </div>
+        <div class="newsletter-checkbox">
+          <input type="checkbox" id="footer-consent" />
+          <label for="footer-consent">I want to subscribe to your mailing list.</label>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<!-- ══ FOOTER ═══════════════════════════════════════════ -->
-<footer>
-  <div>
-    <img class="footer-logo"
-         src="https://static.wixstatic.com/media/3c37a8_8ccf0718210f4813a2582d2f8e596326~mv2.png/v1/crop/x_0,y_48,w_1024,h_929/fill/w_237,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CRE_newlogo_edited.png"
-         alt="CRE Consulting" />
-    <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon">in</a>
-  </div>
-  <div>
-    <h4>COMPANY</h4>
-    <a href="#" onclick="showPage('home')">Home</a>
-    <a href="#" onclick="show
+</body>
+</html>

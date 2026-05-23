@@ -1,0 +1,775 @@
+/* ============================================================
+   CRE CONSULTING  —  Shared Stylesheet
+   consultcre.com
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  color: #333;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   HEADER & NAV
+   ============================================================ */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 0 0;
+  background: #fff;
+}
+
+.site-logo {
+  width: 215px;
+  height: auto;
+  margin-bottom: 22px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 38px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: #5ab4d4;
+  border-right: 1px solid #ddd;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+nav a:first-child {
+  border-left: 1px solid #ddd;
+}
+
+nav a.active,
+nav a:hover {
+  background: #b0b0b0;
+  color: #fff;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  background: #65c8e0;
+  padding: 44px 40px 36px;
+  display: grid;
+  grid-template-columns: 190px 160px 220px 1fr;
+  gap: 20px 36px;
+  align-items: start;
+}
+
+.footer-logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+.footer-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #0077b5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-family: Georgia, serif;
+}
+
+footer h4 {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+footer .footer-links a {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.newsletter-box {
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 20px 22px;
+}
+
+.newsletter-box h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.newsletter-box p {
+  color: #fff;
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.newsletter-box label {
+  color: #fff;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.newsletter-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.newsletter-box input[type="email"] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
+  padding: 5px 2px;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+}
+
+.newsletter-box input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.newsletter-btn {
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.newsletter-btn:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.newsletter-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.newsletter-checkbox input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.newsletter-checkbox label {
+  color: #fff;
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+
+
+/* ============================================================
+   SHARED PAGE UTILITIES
+   ============================================================ */
+
+.page-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px 60px;
+}
+
+/* Hero tagline on home page */
+.home-tagline {
+  text-align: center;
+  padding: 38px 20px 10px;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #888;
+  letter-spacing: 0.01em;
+}
+
+.home-tagline strong {
+  color: #5a9dbc;
+  font-weight: 700;
+}
+
+.tagline-rule {
+  display: block;
+  width: 560px;
+  max-width: 85%;
+  border: none;
+  border-top: 1px solid #bbb;
+  margin: 12px auto 34px;
+}
+
+/* Inner page heading */
+.page-heading {
+  font-size: 1.95rem;
+  font-weight: 300;
+  color: #999;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.heading-rule {
+  border: none;
+  border-top: 1px solid #bbb;
+  width: 460px;
+  max-width: 100%;
+  margin: 0 0 26px;
+}
+
+/* Body text */
+.body-text {
+  font-size: 0.91rem;
+  line-height: 1.78;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+
+/* ============================================================
+   HOME PAGE — 2×2 CARD GRID
+   ============================================================ */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  padding-bottom: 48px;
+}
+
+.home-card {
+  position: relative;
+}
+
+.home-card-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-card-image-wrap img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.home-card:hover .home-card-image-wrap img {
+  transform: scale(1.02);
+}
+
+.home-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(74, 163, 195, 0.82);
+  padding: 13px 18px;
+}
+
+.home-card-overlay a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.home-card-overlay a em {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.home-card-body {
+  padding: 14px 2px 0;
+}
+
+.home-card-body h3 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #333;
+  margin-bottom: 8px;
+  cursor: default;
+}
+
+.home-card-body h3 a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.home-card-body h3 a:hover {
+  color: #5ab4d4;
+}
+
+.home-card-body p {
+  font-size: 0.89rem;
+  line-height: 1.72;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+
+/* ============================================================
+   RIGHT OF WAY PAGE
+   ============================================================ */
+
+.row-intro {
+  margin-bottom: 36px;
+}
+
+.row-three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.row-col h3 {
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: #5ab4d4;
+  margin-bottom: 14px;
+}
+
+.row-col img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.row-col p {
+  font-size: 0.87rem;
+  line-height: 1.72;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.row-col .prequalified {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: #333;
+  margin: 12px 0 6px;
+}
+
+.row-col ul {
+  padding-left: 18px;
+  font-size: 0.86rem;
+  line-height: 2;
+  color: #444;
+}
+
+
+/* ============================================================
+   BROKERAGE / APPRAISAL PAGE
+   ============================================================ */
+
+.brokerage-intro {
+  margin-bottom: 36px;
+}
+
+.brokerage-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 16px;
+}
+
+.brokerage-col h3 {
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: #5ab4d4;
+  text-decoration: underline;
+  margin-bottom: 16px;
+  cursor: default;
+}
+
+.brokerage-col img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.brokerage-col p {
+  font-size: 0.89rem;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+
+.about-top {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 44px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.about-intro p {
+  font-size: 0.91rem;
+  line-height: 1.78;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.about-office-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.team-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+  display: block;
+}
+
+.team-card-name {
+  background: #5ab4d4;
+  color: #fff;
+  padding: 11px 16px;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.team-card-body {
+  padding: 12px 2px 0;
+}
+
+.team-card-body h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 7px;
+}
+
+.team-card-body p {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 50px;
+  align-items: start;
+  margin-bottom: 44px;
+}
+
+.contact-left h2 {
+  font-size: 1.95rem;
+  font-weight: 300;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.contact-left hr {
+  border: none;
+  border-top: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.contact-info-box {
+  background: #bbb;
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.contact-info-box a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info-box a:hover {
+  text-decoration: underline;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.78rem;
+  color: #555;
+  margin-bottom: 5px;
+  margin-top: 16px;
+}
+
+.contact-form label .required {
+  color: #c00;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 7px 3px;
+  font-size: 0.9rem;
+  outline: none;
+  background: transparent;
+  color: #333;
+}
+
+.contact-form input:focus {
+  border-bottom-color: #5ab4d4;
+}
+
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  resize: vertical;
+  height: 140px;
+  color: #333;
+  font-family: inherit;
+  background: transparent;
+}
+
+.contact-form textarea:focus {
+  border-color: #5ab4d4;
+}
+
+.contact-form-left {
+  /* left column: name, email, subject */
+}
+
+.contact-form-right {
+  /* right column: message textarea */
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-right label {
+  margin-top: 0;
+}
+
+.submit-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.btn-submit {
+  background: #5ab4d4;
+  color: #fff;
+  border: none;
+  padding: 10px 36px;
+  font-size: 0.93rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.15s;
+}
+
+.btn-submit:hover {
+  background: #46a0bf;
+}
+
+/* Offices */
+.offices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.office-card {
+  background: #aaa;
+  color: #fff;
+}
+
+.office-card-text {
+  padding: 16px 18px 14px;
+}
+
+.office-card h4 {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.office-card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.office-card iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  display: block;
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET / MOBILE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  nav a {
+    padding: 13px 18px;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row-three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .brokerage-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-tagline {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 560px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    padding: 11px 14px;
+    font-size: 10.5px;
+  }
+
+  .home-tagline {
+    font-size: 1.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}

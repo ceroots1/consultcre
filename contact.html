@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact CRE Consulting — offices in Pendleton, Indianapolis, and Fort Wayne, Indiana." />
+  <title>Contact | CRE Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════ -->
+  <header>
+    <a href="index.html">
+      <img class="site-logo" src="images/logo.png" alt="CRE Consulting" />
+    </a>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="right-of-way.html">RIGHT OF WAY</a>
+      <a href="brokerage.html">BROKERAGE / APPRAISAL</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════ -->
+  <main>
+    <div class="page-wrapper">
+
+      <!-- Contact form + info -->
+      <div class="contact-layout">
+
+        <!-- Left: heading and contact details -->
+        <div class="contact-left">
+          <h1 class="page-heading" style="font-size:1.95rem;">Contact Us</h1>
+          <hr />
+          <div class="contact-info-box">
+            <a href="mailto:info@consultcre.com">info@consultcre.com</a><br />
+            Phone/Text: <a href="tel:3176601492">317.660.1492</a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div>
+          <form class="contact-form" name="contact" method="POST" action="thank-you.html"
+                netlify>
+            <!--
+              If using Netlify Forms: the "netlify" attribute above enables
+              automatic form handling. Submissions go to your Netlify dashboard.
+
+              If using Vercel + a third-party service (e.g. Formspree), replace
+              action="thank-you.html" with your Formspree endpoint:
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              and remove the netlify attribute.
+            -->
+
+            <div class="contact-form-grid">
+
+              <!-- Left column of form -->
+              <div class="contact-form-left">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" />
+
+                <label for="cf-email">
+                  Email <span class="required">*</span>
+                </label>
+                <input type="email" id="cf-email" name="email" required autocomplete="email" />
+
+                <label for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" name="subject" />
+              </div>
+
+              <!-- Right column of form -->
+              <div class="contact-form-right">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message"></textarea>
+              </div>
+
+            </div><!-- /.contact-form-grid -->
+
+            <div class="submit-row">
+              <button type="submit" class="btn-submit">Submit</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div><!-- /.contact-layout -->
+
+      <!-- Office locations -->
+      <div class="offices-grid">
+
+        <div class="office-card">
+          <div class="office-card-text">
+            <h4>Corporate Office:</h4>
+            <p>6271 W Congress Dr.,<br />Pendleton, IN 46064</p>
+          </div>
+          <iframe
+            title="Corporate Office — Pendleton IN"
+            src="https://maps.google.com/maps?q=6271+W+Congress+Dr,+Pendleton,+IN+46064&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="office-card">
+          <div class="office-card-text">
+            <h4>Indianapolis Office:</h4>
+            <p>Indianapolis, IN</p>
+          </div>
+          <iframe
+            title="Indianapolis Office"
+            src="https://maps.google.com/maps?q=Indianapolis,+IN&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="office-card">
+          <div class="office-card-text">
+            <h4>Ft. Wayne Office:</h4>
+            <p>429 E Dupont Rd, Ste 1045<br />Fort Wayne, IN 46825</p>
+          </div>
+          <iframe
+            title="Fort Wayne Office"
+            src="https://maps.google.com/maps?q=429+E+Dupont+Rd+Ste+1045,+Fort+Wayne,+IN+46825&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div><!-- /.offices-grid -->
+
+    </div><!-- /.page-wrapper -->
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer>
+    <div>
+      <img class="footer-logo" src="images/logo.png" alt="CRE Consulting" />
+      <a class="footer-linkedin" href="https://www.linkedin.com/company/cre-consulting" target="_blank" rel="noopener noreferrer">in</a>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="right-of-way.html">Right of Way</a>
+        <a href="brokerage.html">Brokerage / Appraisal</a>
+        <a href="about.html">About</a>
+      </div>
+      <br />
+      <h4>Support</h4>
+      <div class="footer-links">
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h4>CRE Consulting, LLC</h4>
+      <p>
+        6271 W Congress Dr.,<br />
+        Pendleton, IN&nbsp; 46064<br />
+        <br />
+        <a href="mailto:info@consultcre.com">info@consultcre.com</a><br />
+        <a href="tel:3176601492">317.660.1492</a>
+      </p>
+    </div>
+
+    <div>
+      <div class="newsletter-box">
+        <h3>Join CREC Newsletter</h3>
+        <p>Join the CRE Consulting newsletter for Indiana market insights and R/W updates.</p>
+        <label for="footer-email">Email *</label>
+        <div class="newsletter-row">
+          <input type="email" id="footer-email" placeholder="" />
+          <button class="newsletter-btn" type="button">Subscribe</button>
+        </div>
+        <div class="newsletter-checkbox">
+          <input type="checkbox" id="footer-consent" />
+          <label for="footer-consent">I want to subscribe to your mailing list.</label>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
